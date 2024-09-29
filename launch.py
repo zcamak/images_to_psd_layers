@@ -9,12 +9,17 @@ if __name__ == "__main__":
       print(f"Usage: python {sys.argv[0]} <argument>")
       sys.exit(1)
 
-    sorted_jpg_files = m.exif.get_files_list(sys.argv[1])
+    input_path = sys.argv[1]
+
+    if not input_path.endswith('/'):
+      input_path += '/'
+
+    sorted_jpg_files = m.exif.get_files_list(input_path)
     divided_files    = m.utils.divide_list(sorted_jpg_files)
 
     for idx, files in enumerate(divided_files):
 
-      output = sys.argv[1] + f"output{idx}.psd"
+      output = input_path + f"output{idx}.psd"
 
       if os.path.exists(output):
 
