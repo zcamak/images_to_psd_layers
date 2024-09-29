@@ -12,7 +12,7 @@ To create a PSD file with layers from JPG images sorted by date of creation, run
 python launch.py /path/to/jpg/images
 ```
 
-Output PSD files will be created in /path/to/jpg/imagesoutputX.psd.
+Output PSD files will be created in /path/to/jpg/images/outputX.psd.
 
 ## Note
 Due to limitation of file size in GIMP there might be created couple output files.
