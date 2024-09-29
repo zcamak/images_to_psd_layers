@@ -15,9 +15,7 @@ python launch.py /path/to/jpg/images
 Output PSD files will be created in /path/to/jpg/images/outputX.psd.
 
 ## Note
-Due to limitation of file size in GIMP there might be created couple output files.
-Number of output files is approximated. If you need to change of number of files
-just edit function modules/utils.py/divide_list()
+Due to the file size limitations in GIMP, multiple output files might be created. The number of output files is approximated. If you need to change the number of files, edit the `divide_list()` function in `modules/utils.py`.
 
 ## Setup
 1. Clone the repository:
