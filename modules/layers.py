@@ -3,6 +3,9 @@ from psd_tools import PSDImage
 from psd_tools.api.layers import PixelLayer
 from PIL import Image
 
+########################################
+# Print a progress bar to the console.
+
 def progress_bar(iteration, total, name, length=30):
 
     percent = ("{0:.1f}").format(100 * (iteration / float(total)))
@@ -11,6 +14,10 @@ def progress_bar(iteration, total, name, length=30):
 
     sys.stdout.write(f'\r[{bar}] {percent}% [{name}]')
     sys.stdout.flush()
+
+########################################
+# Create a layered image from a list
+# of JPG files.
 
 def create_layers(jpg_files, output):
 

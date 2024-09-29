@@ -1,5 +1,11 @@
 from PIL import Image
 
+########################################
+# Return sublists for JPG files.
+# It's neccessary to split this list,
+# because GIMP has signed INT_MAX as
+# size limit when opening a PSD file.
+
 def divide_list(lst):
 
     width, height = Image.open(lst[0]).size
